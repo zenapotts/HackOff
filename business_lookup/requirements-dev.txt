@@ -1,0 +1,9 @@
+-r requirements.txt
+
+pep8
+flake8==2.5.4  # to ensure flake8 can find .flake8 file
+nose
+coverage
+mock
+wheel
+httpretty==0.8.3

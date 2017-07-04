@@ -1,0 +1,10 @@
+FreshUtils==0.2
+flask==0.11.1
+flask-restful==0.3.5
+gunicorn==19.4.5
+masterlock.py==0.1.56
+statsdecor==0.1.0
+newrelic==2.66.0.49
+flask-sqlalchemy==2.0
+sqlalchemy==1.0.0
+mysql-python==1.2.5

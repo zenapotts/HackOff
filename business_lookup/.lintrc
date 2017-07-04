@@ -1,0 +1,8 @@
+[tools]
+linters = flake8, commitcheck
+
+[tool_flake8]
+max-line-length = 119
+
+[tool_commitcheck]
+pattern = '(?:[Ii]ssues?|[Ss]ees?|[Rr]ef(?:erences?|s?)|[Ff]ix(?:es)?|[Cc]loses?)\s+[a-zA-Z]+\-\d+'

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fb="http://liquibase.freshbooks.com/xml/fb"
+    xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.1.xsd
+        http://liquibase.freshbooks.com/xml/fb
+            http://www.freshbooks.com/xml/ns/fb.xsd">
+
+    <include file="bootstrap.sql" />
+</databaseChangeLog>
