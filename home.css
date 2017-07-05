@@ -4,18 +4,18 @@
 
 .button{
 
-border: 2px solid #85c525;
+border: 0px solid #85c525;
   font-family: Times;
   color: #ffffff;
   font-size: 20px;
   background: #85c525;
-  padding: 10px 20px 10px 20px;
+  padding: 0px 20px 0px 20px;
   text-decoration: none;
   border-radius: 8px;
 }
 
 input[type=text] {
-    width: 130px;
+    width: 140px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
