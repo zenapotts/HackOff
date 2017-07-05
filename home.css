@@ -1,3 +1,19 @@
+.a{
+	color: #85c525;
+}
+.button{
+
+border: 2px solid #85c525;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #85c525;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+}
 body {
 	background-color: #0d83dd;
 }
+
+
