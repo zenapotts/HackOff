@@ -9,8 +9,6 @@ settings = read_config()
 
 class SearchResource(Resource):
 
-    def get(self, city, country):
-        result = search_database(city, country)
-        import pdb;pdb.set_trace()
-        print(result)
+    def get(self, city, country, profession):
+        result = search_database(city, country, profession)
         return result

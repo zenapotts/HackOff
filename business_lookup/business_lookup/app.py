@@ -11,12 +11,14 @@ from business_lookup.database import db
 def make_api():
     from business_lookup.resources.ping import PingResource
     from business_lookup.resources.health import HealthResource
+    from business_lookup.resources.search import SearchResource
 
     api = Api(catch_all_404s=True)
 
     # Monitoring
     api.add_resource(PingResource, '/ping')
     api.add_resource(HealthResource, '/health')
+    api.add_resource(SearchResource, '/<city>/<country>/<profession>')
 
     return api
 

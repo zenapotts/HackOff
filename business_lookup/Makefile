@@ -27,33 +27,6 @@ ALL: help
 TOP_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 MAKEFILE_INC_LOCATION := $(shell test -d $(TOP_DIR)../makefile.inc && echo $(TOP_DIR)../makefile.inc/.git || echo https://github.2ndsiteinc.com/dev/makefile.inc)
 
-define MAKEFILE_UPDATE_SCRIPT
-set -e;\
-if [ ! -d $(TOP_DIR)makefile.inc/.git ];\
-then\
-  rm -rf $(TOP_DIR)makefile.inc;\
-  git clone $(MAKEFILE_INC_ORIGIN) $(TOP_DIR)makefile.inc -b $(MAKEFILE_INC_BRANCH);\
-else\
-  cd makefile.inc;\
-  LAST_FETCH=$$(find .git/FETCH_HEAD -mtime +7 2>&1 || true);\
-  if test -n "$${LAST_FETCH}"; then \
-    git remote set-url origin $(MAKEFILE_INC_ORIGIN);\
-    git fetch --all || \
-    touch -d '2007-01-31 0:0:0' .git/FETCH_HEAD && \
-    git checkout $(MAKEFILE_INC_BRANCH) && \
-    git reset origin/$(MAKEFILE_INC_BRANCH) && \
-else\
-  cd makefile.inc;\
-  LAST_FETCH=$$(find .git/FETCH_HEAD -mtime +7 2>&1 || true);\
-  if [ "$${LAST_FETCH}" ]; then \
-    git fetch --all;\
-    git checkout master;\
-    git reset origin/master;\
-    git checkout --force -- .;\
-  fi;\
-fi
-endef
-
 .PHONY: makefile.inc
 
 makefile.inc:
@@ -129,3 +102,9 @@ rpm: guard-VERSION ## VERSION=x.y.z - Create an rpm for business_lookup
 		--define 'indexhost $(PYPI_INDEX)' \
 		--define 'target_os el$(MAJOR_DISTRIBUTION)' \
 		--define 'release $(BUILD_NUMBER).el$(MAJOR_DISTRIBUTION)'
+
+
+.docker-image.t: Dockerfile requirements.txt requirements-dev.txt
+	docker build --rm -t business_lookup.image -f Dockerfile .
+	touch $@
+

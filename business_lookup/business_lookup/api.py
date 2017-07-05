@@ -4,7 +4,7 @@ import logging
 import newrelic.agent
 import statsdecor
 import statsdecor.decorators
-from flask_restful
+import flask_restful
 from flask import make_response
 from .error import BaseError, NotFoundError
 from werkzeug.exceptions import HTTPException

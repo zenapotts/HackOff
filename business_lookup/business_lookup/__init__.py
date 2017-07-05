@@ -10,4 +10,4 @@ with open(VERSION_FILE_PATH) as f:
     __version__ = f.read().rstrip()
 
 
-PREFIX = 'business_lookup'
+PREFIX = '/service/business_lookup'

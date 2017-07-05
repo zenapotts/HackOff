@@ -28,6 +28,27 @@ def ping_connection(dbapi_connection, connection_record, connection_proxy):
         # Raise an exception force a reconnection.
         raise exc.DisconnectionError()
 
+def search_database(city, country, profession):
+    response_list = []
+
+    command = "select * from system where lower (city) = '" + city.lower() + \
+        "' and lower(country) = '" + country.lower() + \
+        "' and lower(profession) = '" + profession.lower() + "' and active = '1'"
+    with db.engine.connect() as con:
+        rs = con.execute(command)
+        for row in rs:
+            new_dict = {}
+            new_dict['name'] = row['name']
+            new_dict['street'] = row['street']
+            new_dict['city'] = row['city']
+            new_dict['province'] = row['province']
+            new_dict['country'] = row['country']
+            new_dict['bus_phone'] = row['bus_phone']
+            new_dict['info_email'] = row['info_email']
+            new_dict['profession'] = row['profession']
+            response_list.append(new_dict)
+
+    return response_list
 
 def save(instance):
     db.session.add(instance)
