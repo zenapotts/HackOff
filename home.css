@@ -1,0 +1,27 @@
+.a{
+	color: #85c525;
+}
+
+.button{
+
+border: 0px solid #85c525;
+  font-family: Times;
+  color: #ffffff;
+  font-size: 20px;
+  background: #85c525;
+  padding: 0px 20px 0px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+input[type=text] {
+    width: 140px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+body {
+	background-color: #0d83dd;
+}
+
+
