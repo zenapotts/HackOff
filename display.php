@@ -27,11 +27,15 @@ $(document).ready(function () {
 	var country = getParameterByName('country'),
 	city = getParameterByName('city'),
 	profession = getParameterByName('profession');
-	
+
+	console.log(country);
+	console.log(city);
+	console.log(profession);
+
 	$.get(
 		$(this).data('http://docker:4568/service/business_lookup/' + city + '/' + country + '/' + profession),
 		function (data) {
-			console.log(data);
+			// console.log(data);
 		}
 	);
 });
