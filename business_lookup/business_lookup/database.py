@@ -39,7 +39,6 @@ def search_database(city, country, profession):
         for row in rs:
             new_dict = {}
             new_dict['name'] = row['name']
-            new_dict['street'] = row['street']
             new_dict['city'] = row['city']
             new_dict['province'] = row['province']
             new_dict['country'] = row['country']
