@@ -28,20 +28,24 @@ $(document).ready(function () {
 	city = getParameterByName('city'),
 	profession = getParameterByName('profession');
 
-	url = 'http://docker:4568/service/business_lookup/' + city + '/' + country + '/' + profession;
+	requrl = 'http://docker:4568/service/business_lookup/' + city + '/' + country + '/' + profession;
 
 
 	console.log(country);
 	console.log(city);
 	console.log(profession);
-	console.log(url);
+	console.log(requrl);
 
 	$.get(
-		$(this).data(url),
-		function (data) {
+		requrl,
+		function(data) {
 			console.log(data);
 		}
 	);
+
+	// $.ajax({
+	// 	url: requrl,
+	// });
 });
 </script>
 </head> 
