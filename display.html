@@ -1,0 +1,20 @@
+<html>
+<link rel="stylesheet" type="text/css" href="display.css" media="screen" />
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head> 
+<body>
+<a>
+<script>
+	$.get(
+  $(this).data('http://docker:4568/service/business_lookup/<city>/<country>/<profession>'),
+  function (data) {
+    console.log(data);
+    app.start();
+  }
+);
+</script>
+RESULTS
+</a>
+</body>
+</html>
