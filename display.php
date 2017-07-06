@@ -28,14 +28,18 @@ $(document).ready(function () {
 	city = getParameterByName('city'),
 	profession = getParameterByName('profession');
 
+	url = 'http://docker:4568/service/business_lookup/' + city + '/' + country + '/' + profession;
+
+
 	console.log(country);
 	console.log(city);
 	console.log(profession);
+	console.log(url);
 
 	$.get(
-		$(this).data('http://docker:4568/service/business_lookup/' + city + '/' + country + '/' + profession),
+		$(this).data(url),
 		function (data) {
-			// console.log(data);
+			console.log(data);
 		}
 	);
 });
