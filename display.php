@@ -18,7 +18,6 @@ $(document).ready(function () {
 		$(this).data('http://docker:4568/service/business_lookup/<city>/<country>/<profession>'),
 		function (data) {
 			console.log(data);
-			app.start();
 		}
 	);
 });
