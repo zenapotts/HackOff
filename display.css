@@ -1,4 +1,7 @@
 a {color:white}
 body {
 	background-color: #0d83dd;
+	table, th, td {
+		border: 1px solid black;
+	}
 }

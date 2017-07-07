@@ -3,6 +3,9 @@
 <link rel="stylesheet" type="text/css" href="display.css" media="screen" />
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head> 
+<body>
+<table></table>
 <script>
 // $(document).ready(function(){
 // 	$.get(
@@ -13,6 +16,7 @@
 //   		}
 //   	});
 // );
+
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -40,17 +44,34 @@ $(document).ready(function () {
 		requrl,
 		function(data) {
 			console.log(data);
+			
+			tr = $('<tr/>');
+	        tr.append("<td>Business name</td>");
+			tr.append("<td>Business Phone</td>");
+			tr.append("<td>Business Email</td>");
+			tr.append("<td>Profession</td>");
+			tr.append("<td>City</td>");
+			tr.append("<td>Country</td>");
+			$('table').append(tr);
+			
+			var tr;
+	        for (var i = 0; i < data.length; i++) {
+	            tr = $('<tr/>');
+	            tr.append("<td>" + data[i]['name'] + "</td>");
+	            tr.append("<td>" + data[i].bus_phone + "</td>");
+	            tr.append("<td>" + data[i].info_email + "</td>");
+				tr.append("<td>" + data[i].profession + "</td>");
+				tr.append("<td>" + data[i].city + "</td>");
+				tr.append("<td>" + data[i].country + "</td>");
+	            $('table').append(tr);
+	        }
 		}
-	);
+	); 
 
 	// $.ajax({
 	// 	url: requrl,
 	// });
 });
 </script>
-</head> 
-<body>
-<a>
-</a>
 </body>
 </html>
