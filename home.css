@@ -10,12 +10,7 @@ background: #fff;
 color: #8495a2;
 }
 
-.a{
-	color: #85c525;
-}
-
 .button{
-
 border: 0px solid #85C51F;
   font-family: Times;
   color: #ffffff;
@@ -27,15 +22,10 @@ border: 0px solid #85C51F;
   transition: background-color 0.15s;
 }
 
-
 body {
 	background-color: #ffffff;
 }
 
-.search-icon {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-}
+
 
 
