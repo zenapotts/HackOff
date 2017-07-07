@@ -6,8 +6,16 @@ from flask import Flask
 from FreshUtils.logger import set_version
 from business_lookup.database import commit_request_transaction
 from business_lookup.database import db
+from flask.ext.cors import CORS, cross_origin
 
+app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
+@app.route("/")
+@cross_origin()
+def helloWorld():
+  return "Hello, cross-origin-world!"
+  
 def make_api():
     from business_lookup.resources.ping import PingResource
     from business_lookup.resources.health import HealthResource

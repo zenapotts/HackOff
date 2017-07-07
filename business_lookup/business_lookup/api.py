@@ -19,6 +19,7 @@ JSON_API_MEDIA_TYPE = 'application/vnd.api+json'
 def output_json(data, code, headers=None):
     headers = headers or {}
     headers['X-Version'] = __version__
+    headers['Access-Control-Allow-Origin'] = '*'
 
     if not isinstance(data, basestring):
         data = json.dumps(data)
