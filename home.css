@@ -1,39 +1,27 @@
 /*missing magnifying glass in search field*/
 #small-business-search-field{
-width: 20%;
-border-radius: 22px;
-border: 1px solid #c5c7ce;
-font-size: 1.0rem;
-padding: 4px 15px;
-outline: none;
-background: #fff;
-color: #8495a2;
-}
-
-.a{
-	color: #85c525;
+	width: 20%;
+	border-radius: 22px;
+	border: 1px solid #c5c7ce;
+	font-size: 1.0rem;
+	padding: 4px 15px;
+	outline: none;
+	background: #fff;
+	color: #8495a2;
 }
 
 .button{
-border: 0px solid #85C51F;
-  font-family: Times;
-  color: #ffffff;
-  font-size: 20px;
-  background: #85c525;
-  padding: 3px 20px 3px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.15s;
+	border: 0px solid #85C51F;
+	font-weight: 300;
+	color: #ffffff;
+	font-size: 20px;
+	background: #85c525;
+	padding: 3px 20px 3px 20px;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: background-color 0.15s;
 }
 
 body {
 	background-color: #ffffff;
 }
-
-.search-icon {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-}
-
-.container.form.
